@@ -124,12 +124,16 @@ function generarTablaCalendario(contenedor) {
     datosBRP.forEach(row => {
         let celdasServicios = row.serv.map((s, index) => {
             let color = s === "✓" ? "color: #28a745;" : "color: var(--accent-red);";
-            let bg = index === 4 ? "background-color: #fff5f5;" : "";
-            return `<td style="text-align:center; font-weight:bold; ${color} ${bg}">${s}</td>`;
+            // Mantenemos el fondo rojo claro para la columna de Noviembre
+            let bgColumna = index === 4 ? "background-color: #fff5f5;" : ""; 
+            return `<td style="text-align:center; font-weight:bold; ${color} ${bgColumna}">${s}</td>`;
         }).join('');
         
+        // Condición para aplicar fondo amarillo a las filas 36 en adelante
+        let bgFila = row.id >= 36 ? "background-color: #fffacd;" : "";
+        
         html += `
-            <tr>
+            <tr style="${bgFila}">
                 <td>${row.id}</td>
                 <td style="text-align:left; font-size: 11px;">${row.equipo}</td>
                 <td><span style="font-size:11px; padding:3px 6px; background:#f0f0f0; border-radius:4px;">${row.freq}</span></td>
