@@ -33,10 +33,8 @@ function abrirPDF(event, rutaArchivo) {
 }
 
 // ==========================================
-// DATOS DEL PROYECTO BRP
+// INVENTARIO OFICIAL DE 43 EQUIPOS BRP
 // ==========================================
-
-// Inventario Completo Corregido (44 Equipos)
 const datosBRP = [
     { id: 1, equipo: "HORNO FERRO/RATIONAL MOD: iVario NS: E11PK25058091129.", freq: "MENSUAL", serv: ["✓", "✓", "✓", "✓", "X", "X", "X", "X", "X", "X", "X", "X"] },
     { id: 2, equipo: "HORNO FERRO/RATIONALMOD: SCCWE201G NS:G21SH13102373213", freq: "MENSUAL", serv: ["✓", "✓", "✓", "✓", "X", "X", "X", "X", "X", "X", "X", "X"] },
@@ -80,65 +78,21 @@ const datosBRP = [
     { id: 40, equipo: "BAÑO MARÍA", freq: "TRIMESTRAL", serv: ["✓", "", "", "✓", "", "", "X", "", "", "X", "", ""] },
     { id: 41, equipo: "PLANTA DE BATERIAS (BAÑO MARIA ELECTRICA)", freq: "TRIMESTRAL", serv: ["✓", "", "", "✓", "", "", "X", "", "", "X", "", ""] },
     { id: 42, equipo: "BARRA MARIA ELECTRICA", freq: "TRIMESTRAL", serv: ["✓", "", "", "✓", "", "", "X", "", "", "X", "", ""] },
-    { id: 43, equipo: "PROCESADOR HOBART MOD: FP-4001 SERIE: 761054949,", freq: "TRIMESTRAL", serv: ["✓", "", "", "✓", "", "", "X", "", "", "X", "", ""] },
-    { id: "Extra", equipo: "CONSERVADOR DE ALIMENTOS MODELO: STA1HPT-1S-1S SERIE: 11324389", freq: "REPARACIÓN C.", serv: ["-", "-", "-", "✓", "-", "-", "-", "-", "-", "-", "-", "-"] }
+    { id: 43, equipo: "PROCESADOR HOBART MOD: FP-4001 SERIE: 761054949", freq: "TRIMESTRAL", serv: ["✓", "", "", "✓", "", "", "X", "", "", "X", "", ""] }
 ];
 
-// Datos de la tabla de Control y Seguimiento Mensual
-const datosControl = [
-    { mes: "Julio 2026", prog: 43, real: 38, noReal: 5, cuota: "$53,750.00", deduc: "", neto: "$53,750.00" },
-    { mes: "Agosto 2026", prog: 11, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Septiembre 2026", prog: 35, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Octubre 2026", prog: 19, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Noviembre 2026", prog: 35, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Diciembre 2026", prog: 11, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Enero 2027", prog: 43, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Febrero 2027", prog: 11, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Marzo 2027", prog: 35, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Abril 2027", prog: 19, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Mayo 2027", prog: 35, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "Junio 2027", prog: 11, real: 0, noReal: 0, cuota: "$53,750.00", deduc: "$0.00", neto: "$53,750.00" },
-    { mes: "TOTALES", prog: 308, real: 38, noReal: 5, cuota: "$645,000.00", deduc: "$0.00", neto: "$645,000.00", isTotal: true }
-];
-
-
 // ==========================================
-// LÓGICA DEL PANEL DE CONTROL (MODAL)
+// LÓGICA DEL MODAL DE CALENDARIO
 // ==========================================
-let pestanaActual = 'calendario';
-
 function abrirCalendarioModal() {
     document.getElementById('modal-calendario').style.display = 'flex';
-    cambiarPestanaModal('calendario'); // Abre siempre en Calendario por defecto
+    const contenedor = document.getElementById('contenedor-tabla');
+    generarTablaCalendario(contenedor);
 }
 
 function cerrarCalendarioModal(event) {
-    // Si no hay evento (llamado desde el botón X) o si el clic fue en el fondo oscuro (fuera del modal)
     if (!event || event.target.id === 'modal-calendario') {
         document.getElementById('modal-calendario').style.display = 'none';
-    }
-}
-
-function cambiarPestanaModal(pestana) {
-    pestanaActual = pestana;
-    
-    // Seleccionar solo los botones dentro del modal
-    const botones = document.querySelectorAll('.modal-tabs .tab-btn');
-    botones.forEach(btn => btn.classList.remove('active'));
-    
-    if (pestana === 'calendario') {
-        botones[0].classList.add('active');
-    } else {
-        botones[1].classList.add('active');
-    }
-    
-    const contenedor = document.getElementById('contenedor-tabla');
-    
-    // Dibujar la tabla solicitada
-    if (pestana === 'calendario') {
-        generarTablaCalendario(contenedor);
-    } else if (pestana === 'control') {
-        generarTablaControl(contenedor);
     }
 }
 
@@ -148,7 +102,7 @@ function generarTablaCalendario(contenedor) {
             <thead id="cabecera-tabla-calendario">
                 <tr>
                     <th>#</th>
-                    <th style="min-width: 250px;">Equipo y Marca</th>
+                    <th style="min-width: 250px;">Modelo, Serie y Marca del Equipo</th>
                     <th>Frecuencia</th>
                     <th style="color: #28a745;">Jul 26</th>
                     <th style="color: #28a745;">Ago 26</th>
@@ -170,7 +124,6 @@ function generarTablaCalendario(contenedor) {
     datosBRP.forEach(row => {
         let celdasServicios = row.serv.map((s, index) => {
             let color = s === "✓" ? "color: #28a745;" : "color: var(--accent-red);";
-            // Índice 4 corresponde a "Noviembre"
             let bg = index === 4 ? "background-color: #fff5f5;" : "";
             return `<td style="text-align:center; font-weight:bold; ${color} ${bg}">${s}</td>`;
         }).join('');
@@ -181,46 +134,6 @@ function generarTablaCalendario(contenedor) {
                 <td style="text-align:left; font-size: 11px;">${row.equipo}</td>
                 <td><span style="font-size:11px; padding:3px 6px; background:#f0f0f0; border-radius:4px;">${row.freq}</span></td>
                 ${celdasServicios}
-            </tr>
-        `;
-    });
-    
-    html += `</tbody></table>`;
-    contenedor.innerHTML = html;
-}
-
-function generarTablaControl(contenedor) {
-    let html = `
-        <div style="margin-bottom: 20px;">
-            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px;">CONTROL Y SEGUIMIENTO MENSUAL DE SERVICIOS</h4>
-            <p style="color: var(--text-muted); font-size: 14px;">Registro periódico de cumplimiento de mantenimiento y liquidación mensual de facturación</p>
-        </div>
-        <table id="tabla-calendario-datos">
-            <thead id="cabecera-tabla-calendario">
-                <tr>
-                    <th>Mes / Período</th>
-                    <th>Servicios Programados</th>
-                    <th>Servicios Realizados</th>
-                    <th>Servicios No Realizados</th>
-                    <th>Cuota Base Mensual</th>
-                    <th>Deducción por No Realizados</th>
-                    <th>Total Neto a Facturar</th>
-                </tr>
-            </thead>
-            <tbody>
-    `;
-    
-    datosControl.forEach(row => {
-        let rowStyle = row.isTotal ? 'font-weight: bold; background-color: #e9ecef; color: var(--brand-blue-dark);' : '';
-        html += `
-            <tr style="${rowStyle}">
-                <td style="text-align:left;">${row.mes}</td>
-                <td>${row.prog}</td>
-                <td>${row.real}</td>
-                <td>${row.noReal}</td>
-                <td>${row.cuota}</td>
-                <td>${row.deduc}</td>
-                <td>${row.neto}</td>
             </tr>
         `;
     });

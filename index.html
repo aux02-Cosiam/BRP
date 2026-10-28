@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta Comercial - BRP & Grupo Cosiam</title>
+    <title>Seguimiento de Póliza y Propuesta - BRP & Grupo Cosiam</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,19 +15,18 @@
                 <a href="#inicio" onclick="seleccionar()" style="display: flex; align-items: center;">
                     <img src="img/logo.jpg" alt="Logo Cosiam" class="logo-header">
                     <span class="text-red" style="margin: 0 15px; font-family: 'Righteous', cursive; font-size: 20px;">X</span>
-                    <!-- Logo de BRP -->
-                    <img src="img/logo-brp.png" alt="Logo BRP" class="logo-header" style="height: 35px;"> 
+                    <img src="img/logo-brp.jpg" alt="Logo BRP" class="logo-header" style="height: 35px;"> 
                 </a>
             </div>
             <div class="menu-toggle" onclick="mostrarOcultarMenu()">☰</div>
             <nav id="nav">
                 <ul>
                     <li><a href="#economica" onclick="seleccionar()">INVERSIÓN</a></li>
-                    <li><a href="#cotizaciones" onclick="seleccionar()">PENDIENTES</a></li>
+                    <li><a href="#correctivos" onclick="seleccionar()">CORRECTIVOS</a></li>
+                    <li><a href="#cotizaciones" onclick="seleccionar()">COTIZACIONES</a></li>
                     <li><a href="#resumen" onclick="seleccionar()">RESUMEN</a></li>
-                    <li><a href="#actividades" onclick="seleccionar()">ACTIVIDADES</a></li>
-                    <li><a href="#condiciones" onclick="seleccionar()">CONDICIONES</a></li>
-                    <li><a href="#calendario" onclick="seleccionar()">CALENDARIO</a></li>
+                    <li><a href="#beneficios" onclick="seleccionar()">BENEFICIOS</a></li>
+                    <li><a href="#" onclick="abrirCalendarioModal(); seleccionar(); return false;">CALENDARIO</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -39,453 +38,740 @@
         <div class="contenido-banner">
             <div class="alianza-logos">
                 <img src="img/logo.jpg" alt="Grupo Cosiam" class="logo-banner">
-                <img src="img/logo-brp.png" alt="BRP" class="logo-banner" style="object-fit: contain; padding: 15px;">
+                <img src="img/logo-brp.jpg" alt="BRP" class="logo-banner" style="object-fit: contain; padding: 15px;">
             </div>
 
             <h1>Póliza de Mantenimiento Preventivo 2026-2027 BRP</h1>
-            <h2>Propuesta Comercial de Servicios Especializados para el Comedor BRP</h2>
-            <a href="#economica" class="btn-azul">Ver Propuesta <i class="fa-solid fa-arrow-down"></i></a>
+            <h2>Estado Actual de Servicios, Avance de Inversión y Correctivos Pendientes</h2>
+            <a href="#economica" class="btn-azul">Ver Estado de Póliza <i class="fa-solid fa-arrow-down"></i></a>
         </div>
     </section>
 
-    <!-- 2. PROPUESTA ECONÓMICA -->
+    <!-- 2. AVANCE DE INVERSIÓN (4 MESES EJECUTADOS Y TOTALES) -->
     <section id="economica" class="seccion-clara portafolio">
         <div class="contenido-seccion">
-            <h2>Propuesta Económica</h2>
-            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Esquema de pago diseñado a 12 meses cubriendo la totalidad de equipos del Comedor BRP.</p>
+            <h2>Avance de Inversión (2026)</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">
+                Desglose financiero de los mantenimientos preventivos ejecutados de Julio a Octubre 2026 y balance anual.
+            </p>
 
-            <div class="galeria pricing-galeria">
-                <div class="proyecto price-card active-price" data-plan="A" style="width: 100%; max-width: 500px; margin: auto;">
-                    <div class="badge-recomendado">ESQUEMA MENSUAL</div>
-                    <div class="overlay-price">
-                        <h3>Póliza Anual</h3>
-                        <p class="subtitle-price text-red">12 Pagos Mensuales</p>
-                        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Cobertura total con <strong>308 servicios programados</strong> para 44 equipos gastronómicos.</p>
+            <!-- Contenedor Grid de 4 Tarjetas para los Meses Ejecutados -->
+            <div class="grid-4" style="align-items: stretch; margin-bottom: 40px;">
+                
+                <!-- Tarjeta JULIO -->
+                <div class="proyecto price-card" style="width: 100%; border-color: #28a745; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 15px;">
+                    <div class="badge-recomendado" style="background: #28a745; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);">MES 1 COMPLETADO</div>
+                    <div class="overlay-price" style="margin-top: 15px;">
+                        <h3 style="font-size: 22px;">Julio 2026</h3>
+                        <p class="subtitle-price" style="color: #28a745; font-size: 13px;">43 Equipos Auditados</p>
                         
-                        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--border-color);">
-                            <h4 style="font-size: 14px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 5px;">Inversión Mensual</h4>
-                            <h2 class="text-blue" style="font-size: 38px; font-family: 'Righteous', cursive; margin: 0;">$53,750.00 <span style="font-size: 16px; color: var(--text-muted);">MXN</span></h2>
-                            <p style="font-size: 12px; margin-top: 5px; color: #888;">*Subtotal mensual. Más IVA.</p>
-                        </div>
-
-                        <div style="text-align: left; margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">
-                            <p><strong>Subtotal Anual:</strong> $645,000.00 MXN</p>
-                            <p><strong>IVA (16%):</strong> $103,200.00 MXN</p>
-                            <p style="font-weight: bold; color: var(--text-main); font-size: 16px; margin-top: 5px;">Total Anual: $748,200.00 MXN</p>
-                        </div>
-
-                        <div style="margin-top: 25px;">
-                            <button onclick="abrirPDF(event, 'pdfs/COTIZACION_BRP.pdf')" class="btn-calendario-rojo" style="width: 100%; padding: 15px; font-size: 16px;">
-                                <i class="fa-solid fa-file-invoice-dollar" style="font-size: 20px;"></i> Descargar Cotización Oficial
-                            </button>
+                        <div style="margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px;">
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(40, 167, 69, 0.16) 100%); padding: 15px 10px; border-radius: 8px 8px 0 0; border: 1px solid #28a745; text-align: center;">
+                                <span style="display: inline-block; background: #28a745; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Cuota SIN IVA</span>
+                                <h2 style="font-size: 28px; font-family: 'Righteous', cursive; margin: 0; color: #1e7e34;">$53,750.00</h2>
+                            </div>
+                            <div style="background-color: #ffffff; padding: 10px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none; text-align: left; font-size: 12px; color: #666;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>IVA (16%):</span>
+                                    <span>$8,600.00</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 4px; color: var(--text-main); font-weight: bold;">
+                                    <span>TOTAL:</span>
+                                    <span>$62,350.00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div style="background-color: #eafaf1; padding: 10px; border-radius: 6px; font-size: 11px; color: #1e7e34; text-align: center; border: 1px solid #28a745; font-weight: 600;">
+                        <i class="fa-solid fa-file-invoice" style="margin-right: 4px;"></i> Factura F-2652 Pagada
+                    </div>
                 </div>
+
+                <!-- Tarjeta AGOSTO -->
+                <div class="proyecto price-card" style="width: 100%; border-color: #28a745; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 15px;">
+                    <div class="badge-recomendado" style="background: #28a745; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);">MES 2 COMPLETADO</div>
+                    <div class="overlay-price" style="margin-top: 15px;">
+                        <h3 style="font-size: 22px;">Agosto 2026</h3>
+                        <p class="subtitle-price" style="color: #28a745; font-size: 13px;">11 Equipos Auditados</p>
+                        
+                        <div style="margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px;">
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(40, 167, 69, 0.16) 100%); padding: 15px 10px; border-radius: 8px 8px 0 0; border: 1px solid #28a745; text-align: center;">
+                                <span style="display: inline-block; background: #28a745; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Cuota SIN IVA</span>
+                                <h2 style="font-size: 28px; font-family: 'Righteous', cursive; margin: 0; color: #1e7e34;">$53,750.00</h2>
+                            </div>
+                            <div style="background-color: #ffffff; padding: 10px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none; text-align: left; font-size: 12px; color: #666;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>IVA (16%):</span>
+                                    <span>$8,600.00</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 4px; color: var(--text-main); font-weight: bold;">
+                                    <span>TOTAL:</span>
+                                    <span>$62,350.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-color: #eafaf1; padding: 10px; border-radius: 6px; font-size: 11px; color: #1e7e34; text-align: center; border: 1px solid #28a745; font-weight: 600;">
+                        <i class="fa-solid fa-file-invoice" style="margin-right: 4px;"></i> Factura F-2665 Pagada
+                    </div>
+                </div>
+
+                <!-- Tarjeta SEPTIEMBRE -->
+                <div class="proyecto price-card" style="width: 100%; border-color: #28a745; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 15px;">
+                    <div class="badge-recomendado" style="background: #28a745; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);">MES 3 COMPLETADO</div>
+                    <div class="overlay-price" style="margin-top: 15px;">
+                        <h3 style="font-size: 22px;">Septiembre 2026</h3>
+                        <p class="subtitle-price" style="color: #28a745; font-size: 13px;">35 Equipos Auditados</p>
+                        
+                        <div style="margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px;">
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(40, 167, 69, 0.16) 100%); padding: 15px 10px; border-radius: 8px 8px 0 0; border: 1px solid #28a745; text-align: center;">
+                                <span style="display: inline-block; background: #28a745; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Cuota SIN IVA</span>
+                                <h2 style="font-size: 28px; font-family: 'Righteous', cursive; margin: 0; color: #1e7e34;">$53,750.00</h2>
+                            </div>
+                            <div style="background-color: #ffffff; padding: 10px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none; text-align: left; font-size: 12px; color: #666;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>IVA (16%):</span>
+                                    <span>$8,600.00</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 4px; color: var(--text-main); font-weight: bold;">
+                                    <span>TOTAL:</span>
+                                    <span>$62,350.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-color: #fff5f5; padding: 10px; border-radius: 6px; font-size: 11px; color: var(--accent-red); text-align: center; border: 1px solid var(--accent-red); font-weight: 600;">
+                        <i class="fa-solid fa-clock" style="margin-right: 4px;"></i> Factura F-2707 Pendiente
+                    </div>
+                </div>
+
+                <!-- Tarjeta OCTUBRE -->
+                <div class="proyecto price-card" style="width: 100%; border-color: #28a745; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 15px;">
+                    <div class="badge-recomendado" style="background: #28a745; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);">MES 4 COMPLETADO</div>
+                    <div class="overlay-price" style="margin-top: 15px;">
+                        <h3 style="font-size: 22px;">Octubre 2026</h3>
+                        <p class="subtitle-price" style="color: #28a745; font-size: 13px;">19 Equipos Auditados</p>
+                        
+                        <div style="margin-top: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px;">
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(40, 167, 69, 0.16) 100%); padding: 15px 10px; border-radius: 8px 8px 0 0; border: 1px solid #28a745; text-align: center;">
+                                <span style="display: inline-block; background: #28a745; color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Cuota SIN IVA</span>
+                                <h2 style="font-size: 28px; font-family: 'Righteous', cursive; margin: 0; color: #1e7e34;">$53,750.00</h2>
+                            </div>
+                            <div style="background-color: #ffffff; padding: 10px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none; text-align: left; font-size: 12px; color: #666;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>IVA (16%):</span>
+                                    <span>$8,600.00</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 4px; color: var(--text-main); font-weight: bold;">
+                                    <span>TOTAL:</span>
+                                    <span>$62,350.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-color: #fff5f5; padding: 10px; border-radius: 6px; font-size: 11px; color: var(--accent-red); text-align: center; border: 1px solid var(--accent-red); font-weight: 600;">
+                        <i class="fa-solid fa-clock" style="margin-right: 4px;"></i> Factura F-2753 Pendiente
+                    </div>
+                </div>
+
+            </div> <!-- Cierra grid-4 -->
+            
+            <!-- Resumen Total: Ejecutado, Pendiente y Anual -->
+            <div class="grid-3" style="margin-top: 10px; align-items: stretch;">
+                
+                <!-- Inversión Ejecutada -->
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid #28a745; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Inversión Ejecutada (4 Meses)</h4>
+                    <h2 style="color: #28a745; font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$215,000.00 <span style="font-size: 14px; color: var(--text-muted);">SIN IVA</span></h2>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">Total con IVA (16%): <strong>$249,400.00 MXN</strong></p>
+                </div>
+
+                <!-- Saldo Pendiente -->
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid #6c757d; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Saldo Pendiente (8 Meses)</h4>
+                    <h2 style="color: #6c757d; font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$430,000.00 <span style="font-size: 14px; color: var(--text-muted);">SIN IVA</span></h2>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">Total con IVA (16%): <strong>$498,800.00 MXN</strong></p>
+                </div>
+
+                <!-- Total Póliza Anual -->
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid var(--brand-blue); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Total Póliza Anual (12 Meses)</h4>
+                    <h2 class="text-blue" style="font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$645,000.00 <span style="font-size: 14px; color: var(--text-muted);">SIN IVA</span></h2>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">Total con IVA (16%): <strong>$748,200.00 MXN</strong></p>
+                </div>
+
+            </div>
+
+            <!-- Botón PDF Centralizado -->
+            <div style="text-align: center; margin-top: 30px;">
+                <button onclick="abrirPDF(event, 'pdfs/Poliza_BRP.pdf')" class="btn-calendario-rojo" style="max-width: 450px; padding: 14px; font-size: 15px;">
+                    <i class="fa-solid fa-file-pdf" style="font-size: 18px;"></i> Ver Póliza Oficial (COT. D27032603)
+                </button>
+            </div>
+
+        </div> <!-- Cierra contenido-seccion -->
+    </section>
+
+    <!-- 8. CALENDARIO ANUAL -->
+    <section id="calendario" class="seccion-clara" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: linear-gradient(90deg, var(--brand-blue), var(--accent-red)); border-radius: 2px;"></div>
+        <div class="contenido-seccion" style="padding-top: 50px; padding-bottom: 50px;">
+            <h2>Calendario Operativo 2026-2027</h2>
+            <div style="max-width: 650px; margin: 30px auto 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--accent-red); text-align: center; position: relative;">
+                <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background-color: var(--accent-red); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 24px; margin-top: 15px; margin-bottom: 10px;">En Curso — Próximo Servicio: Noviembre 2026</h3>
+                <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">Los mantenimientos preventivos iniciaron en Julio 2026. Consulta el calendario completo de los 43 equipos.</p>
+                <button onclick="abrirCalendarioModal()" class="btn-calendario-rojo">
+                    <i class="fa-solid fa-table-cells" style="font-size: 20px;"></i> Ver Calendario de Servicios (43 Equipos)
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- 2.5 COTIZACIONES CORRECTIVAS PENDIENTES -->
-    <section id="cotizaciones" class="seccion-oscura portafolio">
-        <div class="contenido-seccion">
-            <h2>Cotizaciones Correctivas Pendientes</h2>
-            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Refacciones y servicios correctivos previamente diagnosticados que requieren autorización para mantener la operatividad óptima del comedor.</p>
-
-            <div class="grid-2">
-                <!-- COT-2993 -->
-                <div class="info-panel" style="background: #fff; padding: 30px; border-radius: 10px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin: 0;">Folio: COT-2993</h3>
-                        <span style="background: #f8f9fa; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; color: var(--text-muted);">16/Oct/2026</span>
-                    </div>
-                    
-                    <p style="color: var(--text-main); font-weight: 600; margin-bottom: 10px;">Lavaloza Tren Compacto Winterhalter (STR 110)</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-wrench text-blue" style="margin-right: 8px;"></i> <strong>Kit Bomba de Drenado y Sensor de Nivel</strong></li>
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-circle-info text-blue" style="margin-right: 8px;"></i> Incluye: Air pressure chamber, transmisor, mangueras y cableado universal.</li>
-                    </ul>
-
-                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid var(--border-color); text-align: center;">
-                        <span style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Inversión Total (C/ IVA)</span>
-                        <h4 class="text-red" style="font-size: 24px; font-family: 'Righteous', cursive; margin: 5px 0 0 0;">$31,262.00 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h4>
-                    </div>
-
-                    <button onclick="abrirPDF(event, 'pdfs/COTIZACION COSIAM0000002993 (1).pdf')" class="pdf-btn">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Cotización COT-2993
-                    </button>
-                </div>
-
-                <!-- COT-2928 -->
-                <div class="info-panel" style="background: #fff; padding: 30px; border-radius: 10px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin: 0;">Folio: COT-2928</h3>
-                        <span style="background: #f8f9fa; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; color: var(--text-muted);">23/Sep/2026</span>
-                    </div>
-                    
-                    <p style="color: var(--text-main); font-weight: 600; margin-bottom: 10px;">Lote de Refacciones Multimarca (6 Conceptos)</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 14px; color: var(--text-muted);">
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-wrench text-blue" style="margin-right: 8px;"></i> Juntas de puerta (Conservadores Calientes TRUE).</li>
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-wrench text-blue" style="margin-right: 8px;"></i> Bujía y Piloto de Ignición (Marmita Intertécnica).</li>
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-wrench text-blue" style="margin-right: 8px;"></i> Kit Electrodo Generador de Vapor (Horno Rational).</li>
-                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-circle-info text-blue" style="margin-right: 8px;"></i> Incluye también Lámpara Teflón (True) y Niple (Baño María).</li>
-                    </ul>
-
-                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid var(--border-color); text-align: center;">
-                        <span style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Inversión Total (C/ IVA)</span>
-                        <h4 class="text-red" style="font-size: 24px; font-family: 'Righteous', cursive; margin: 5px 0 0 0;">$35,841.20 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h4>
-                    </div>
-
-                    <button onclick="abrirPDF(event, 'pdfs/COTIZACION COSIAM0000002928 (2).pdf')" class="pdf-btn">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Cotización COT-2928
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. RESUMEN GENERAL -->
+    <!-- 5. RESUMEN GENERAL E INVENTARIO ESPECÍFICO POR MESES -->
     <section id="resumen" class="seccion-oscura sobremi">
         <div class="contenido-seccion">
-            <h2>Resumen General</h2>
-            <p style="text-align:center;">Visión global del proyecto para las instalaciones del Comedor BRP.</p>
+            <h2>Resumen General de Equipos</h2>
+            <p style="text-align:center;">Desglose específico de los <strong>43 equipos</strong> en póliza clasificados por su frecuencia y volumen exacto de intervenciones mensuales.</p>
 
             <div class="grid-3" style="margin-top: 40px; margin-bottom: 40px;">
                 <div class="kpi-card interes">
                     <i class="fa-solid fa-industry text-blue"></i>
                     <h3>Comedor BRP</h3>
-                    <span style="color:var(--text-muted);">Cobertura concentrada en las instalaciones principales de Querétaro.</span>
+                    <span style="color:var(--text-muted);">Instalaciones Parque Industrial Querétaro (Av. Ferrocarril 202).</span>
                 </div>
                 <div class="kpi-card interes">
                     <i class="fa-solid fa-layer-group text-blue"></i>
-                    <h3>44 Equipos</h3>
-                    <span style="color:var(--text-muted);">Inventario total bajo póliza (Hornos, Refrigeración, Zonas Calientes).</span>
+                    <h3>43 Equipos</h3>
+                    <span style="color:var(--text-muted);">11 Mensuales, 24 Bimestrales y 8 Trimestrales bajo cobertura.</span>
                 </div>
                 <div class="kpi-card interes">
                     <i class="fa-solid fa-calendar-check text-blue"></i>
                     <h3>308 Servicios</h3>
-                    <span style="color:var(--text-muted);">Servicios Anuales. <b>Próxima visita: Noviembre 2026</b>.</span>
+                    <span style="color:var(--text-muted);">Iniciados en Julio 2026. <strong>Próximo servicio: Noviembre 2026</strong>.</span>
                 </div>
             </div>
 
-            <!-- Acordeón Inventario (Clasificado por Frecuencia) -->
+            <!-- Distribución de servicios por mes -->
+            <div style="background-color: #ffffff; padding: 25px 30px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">
+                    <i class="fa-solid fa-chart-column text-red" style="margin-right: 8px;"></i> Distribución Mensual de Intervenciones
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+                    Volumen de equipos a auditar y mantener por visita según el calendario operativo (308 intervenciones anuales).
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Jul 26:</strong> 43 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Ago 26:</strong> 11 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Sep 26:</strong> 35 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Oct 26:</strong> 19 Equipos</span>
+                    <span style="background: #fff5f5; border: 1px solid var(--accent-red); color: var(--accent-red); font-weight: bold; border-radius: 6px; padding: 8px 12px; font-size: 13px;">Nov 26: 35 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Dic 26:</strong> 11 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Ene 27:</strong> 43 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Feb 27:</strong> 11 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Mar 27:</strong> 35 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Abr 27:</strong> 19 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>May 27:</strong> 35 Equipos</span>
+                    <span style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 12px; font-size: 13px;"><strong>Jun 27:</strong> 11 Equipos</span>
+                </div>
+            </div>
+
+            <!-- Acordeón Inventario Detallado por Frecuencia y Meses -->
             <div class="acordeon-contenedor">
+                
+                <!-- 1. MENSUALES (11 Equipos) -->
                 <div class="acordeon-item">
                     <button class="acordeon-cabecera">
-                        <span><i class="fa-solid fa-calendar-day text-blue" style="margin-right:10px;"></i> Equipos de Mantenimiento Mensual | 11 Equipos</span>
+                        <span>
+                            <i class="fa-solid fa-calendar-day text-blue" style="margin-right:10px;"></i> 
+                            Mantenimiento Mensual (11 Equipos) — <strong class="text-red">Todos los meses</strong>
+                        </span>
                         <i class="fa-solid fa-chevron-down icono-giro"></i>
                     </button>
                     <div class="acordeon-contenido">
                         <div class="desglose-grid">
+                            <p style="margin-bottom: 15px; font-size: 14px; color: var(--brand-blue-dark); background: #eef4fb; padding: 10px 15px; border-radius: 6px;">
+                                <strong>Meses de intervención (12 visitas al año):</strong> Julio 2026 a Junio 2027.
+                            </p>
                             <ul>
-                                <li><strong class="text-dark">Hornos:</strong> Ferro/Rational iVario, SCCWE201G, LM100DG.A, Convección HB Ecomax.</li>
-                                <li><strong class="text-dark">Lavado:</strong> Lavaloza Tren Compacto Winterhalter, Lavaloza Capota Asber.</li>
-                                <li><strong class="text-dark">Cocción Mayor:</strong> Sartenetas y Marmitas Intertécnica (MVG-60, SG-4).</li>
+                                <li><strong class="text-dark">1. Horno Ferro/Rational:</strong> Mod. iVario | NS: E11PK25058091129</li>
+                                <li><strong class="text-dark">2. Horno Ferro/Rational:</strong> Mod. SCCWE201G | NS: G21SH13102373213</li>
+                                <li><strong class="text-dark">3. Horno Rational:</strong> Mod. LM100DG.A | NS: G11SJ22062980299</li>
+                                <li><strong class="text-dark">4. Horno de Convección HB Ecomax:</strong> Mod. ME2205402</li>
+                                <li><strong class="text-dark">5. Lavaloza Tren Compacto Winterhalter:</strong> Mod. STR 110 ENERGY | NS: 1257146</li>
+                                <li><strong class="text-dark">6. Lavaloza de Capota Asber:</strong> Mod. GE-H500 | NS: 8102536349</li>
+                                <li><strong class="text-dark">7. Sarteneta Intertécnica:</strong> Mod. SG-4 | NS: 8309</li>
+                                <li><strong class="text-dark">8. Sarteneta Intertécnica:</strong> Mod. SG-4 | NS: 9607-2</li>
+                                <li><strong class="text-dark">9. Sarteneta Intertécnica:</strong> Mod. SG-4 | NS: 9655-2</li>
+                                <li><strong class="text-dark">10. Marmita Intertécnica:</strong> Mod. MVG-60 | NS: 9607-1</li>
+                                <li><strong class="text-dark">11. Marmita Intertécnica:</strong> Mod. MVG-60 | NS: 9655-1</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="acordeon-item">
-                    <button class="acordeon-cabecera">
-                        <span><i class="fa-solid fa-calendar-week text-blue" style="margin-right:10px;"></i> Equipos de Mantenimiento Bimestral | 24 Equipos</span>
-                        <i class="fa-solid fa-chevron-down icono-giro"></i>
-                    </button>
-                    <div class="acordeon-contenido">
-                        <div class="desglose-grid">
-                            <ul>
-                                <li><strong class="text-dark">Refrigeración y Hielo:</strong> Fabricador Hoshizaki, Cámaras Bohn, Refrigeradores True 2 puertas.</li>
-                                <li><strong class="text-dark">Cocción:</strong> Planchas Coriat 48", Planchas Drago/Asber, Estufones, Freidoras Imperial y Drago.</li>
-                                <li><strong class="text-dark">Conservación:</strong> Conservadores calientes True.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="acordeon-item">
-                    <button class="acordeon-cabecera">
-                        <span><i class="fa-solid fa-calendar-days text-blue" style="margin-right:10px;"></i> Equipos de Mantenimiento Trimestral | 8 Equipos</span>
-                        <i class="fa-solid fa-chevron-down icono-giro"></i>
-                    </button>
-                    <div class="acordeon-contenido">
-                        <div class="desglose-grid">
-                            <ul>
-                                <li><strong class="text-dark">Línea de Servicio:</strong> Baños María, Plantas de baterías (eléctricas).</li>
-                                <li><strong class="text-dark">Preparación:</strong> Procesador Hobart FP-4001.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Mapa de Ubicación -->
-            <h3 style="text-align:center; color: var(--brand-blue-dark); font-family: 'Righteous', cursive; margin-top: 60px; margin-bottom: 30px; font-size: 28px;">Ubicación Estratégica</h3>
-            
-            <div class="grid-3" style="grid-template-columns: 1fr; max-width: 700px; margin: auto;">
-                <div class="info-panel" style="padding: 0; overflow: hidden; border-radius: 10px; text-align: center; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                    <div style="padding: 15px; background: var(--brand-blue-dark); color: #fff;">
-                        <h4 style="margin: 0; font-family: 'Righteous', cursive; font-size: 18px; color: #fff;">Comedor BRP (Querétaro)</h4>
-                        <p style="font-size: 12px; margin-top: 5px; color: #ddd; margin-bottom: 0;">Parque Industrial Querétaro</p>
+                <!-- 2. BIMESTRALES (24 Equipos) -->
+                <div class="acordeon-item">
+                    <button class="acordeon-cabecera">
+                        <span>
+                            <i class="fa-solid fa-calendar-week text-blue" style="margin-right:10px;"></i> 
+                            Mantenimiento Bimestral (24 Equipos) — <strong class="text-red">Jul, Sep, Nov 26 | Ene, Mar, May 27</strong>
+                        </span>
+                        <i class="fa-solid fa-chevron-down icono-giro"></i>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="desglose-grid">
+                            <p style="margin-bottom: 15px; font-size: 14px; color: var(--brand-blue-dark); background: #eef4fb; padding: 10px 15px; border-radius: 6px;">
+                                <strong>Meses de intervención (6 visitas al año):</strong> Julio 2026, Septiembre 2026, <strong>Noviembre 2026 (Próximo)</strong>, Enero 2027, Marzo 2027 y Mayo 2027.
+                            </p>
+                            <ul>
+                                <li><strong class="text-dark">12. Fabricador de Hielo Hoshizaki:</strong> Mod. KML-631MAH | NS: F0654QM</li>
+                                <li><strong class="text-dark">13. Cámara de Conservación Nuevo PTE:</strong> Mod. M22L0024 PTE | NS: PTE</li>
+                                <li><strong class="text-dark">14. Conservación Bohn:</strong> Mod. 900-06-A | NS: M12L09731</li>
+                                <li><strong class="text-dark">15. Cámara de Congelación Bohn:</strong> Mod. 900-06-A | NS: M12K09100</li>
+                                <li><strong class="text-dark">16. Refrigerador 2 Puertas TRUE (3):</strong> Mod. 900-07-C | NS: 7488213</li>
+                                <li><strong class="text-dark">17. Refrigerador 2 Puertas TRUE (5):</strong> Mod. 900-07-E | NS: 9566245</li>
+                                <li><strong class="text-dark">18. Refrigerador 2 Puertas TRUE (6):</strong> Mod. 900-07-F | NS: 9566223</li>
+                                <li><strong class="text-dark">19. Refrigerador 2 Puertas TRUE (7):</strong> Mod. 900-07-A | NS: 7498206</li>
+                                <li><strong class="text-dark">20. Plancha de 48" (4 Quemadores) Coriat:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">21. Plancha de 48" (4 Quemadores) Coriat:</strong> Unidad 2</li>
+                                <li><strong class="text-dark">22. Plancha Chica Drago:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">23. Plancha de 4 Quemadores Asber:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">24. Plancha de 3 Quemadores Drago:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">25. Plancha de 3 Quemadores Drago:</strong> Unidad 2</li>
+                                <li><strong class="text-dark">26. Freidora Imperial:</strong> Mod. 900-10-B | NS: S/S</li>
+                                <li><strong class="text-dark">27. Conservador Caliente TRUE:</strong> Mod. STR2HPT-2S-2S | NS: 8078460</li>
+                                <li><strong class="text-dark">28. Conservador Caliente TRUE:</strong> Mod. STR2HPT-2S-2S | NS: 9586346</li>
+                                <li><strong class="text-dark">29. Conservador Caliente TRUE:</strong> Mod. STR2HPT-2S-2S | NS: 9586347</li>
+                                <li><strong class="text-dark">30. Conservador Caliente TRUE:</strong> Mod. PASS-TRUE | NS: 9811647</li>
+                                <li><strong class="text-dark">31. Freidora Drago:</strong> Mod. FG-20-RS-I | NS: 2001000ESA220604220601036</li>
+                                <li><strong class="text-dark">32. Freidora Drago:</strong> Mod. FG-20-RS-I | NS: 2001000ESA220604220601134</li>
+                                <li><strong class="text-dark">33. Estufón de 3 Quemadores Drago:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">34. Estufón de 2 Quemadores Drago:</strong> Mod. GFO-002-00 | NS: 844-2660-101022-227</li>
+                                <li><strong class="text-dark">35. Estufón Sencillo:</strong> Unidad 1</li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Inserta aquí el enlace de Google Maps específico de BRP -->
-                    <iframe src="https://maps.google.com/maps?q=BRP%20Queretaro&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- 3. TRIMESTRALES (8 Equipos) -->
+                <div class="acordeon-item">
+                    <button class="acordeon-cabecera">
+                        <span>
+                            <i class="fa-solid fa-calendar-days text-blue" style="margin-right:10px;"></i> 
+                            Mantenimiento Trimestral (8 Equipos) — <strong class="text-red">Jul, Oct 26 | Ene, Abr 27</strong>
+                        </span>
+                        <i class="fa-solid fa-chevron-down icono-giro"></i>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="desglose-grid">
+                            <p style="margin-bottom: 15px; font-size: 14px; color: var(--brand-blue-dark); background: #eef4fb; padding: 10px 15px; border-radius: 6px;">
+                                <strong>Meses de intervención (4 visitas al año):</strong> Julio 2026, Octubre 2026, Enero 2027 y Abril 2027.
+                            </p>
+                            <ul>
+                                <li><strong class="text-dark">36. Baño María:</strong> Unidad 1</li>
+                                <li><strong class="text-dark">37. Baño María:</strong> Unidad 2</li>
+                                <li><strong class="text-dark">38. Baño María:</strong> Unidad 3</li>
+                                <li><strong class="text-dark">39. Baño María:</strong> Unidad 4</li>
+                                <li><strong class="text-dark">40. Baño María:</strong> Unidad 5</li>
+                                <li><strong class="text-dark">41. Planta de Baterías:</strong> Baño María Eléctrica</li>
+                                <li><strong class="text-dark">42. Barra María Eléctrica:</strong> Unidad Principal</li>
+                                <li><strong class="text-dark">43. Procesador Hobart:</strong> Mod. FP-4001 | Serie: 761054949</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. MANTENIMIENTOS CORRECTIVOS PENDIENTES -->
+    <section id="correctivos" class="seccion-oscura curriculum">
+        <div class="contenido-seccion">
+            <h2>Mantenimientos Correctivos Pendientes</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Intervenciones técnicas y refacciones requeridas en cotizaciones formales para restablecer el desempeño de los equipos.</p>
+
+            <div class="fila" style="gap: 25px; align-items: stretch;">
+                <!-- Columna 1 -->
+                <div class="col" style="padding: 0; display: flex; flex-direction: column;">
+                    
+                    <!-- Lavaloza Winterhalter -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-soap text-red" style="margin-right: 8px;"></i> 1. Lavaloza Tren Compacto Winterhalter
+                            </h4>
+                            <p style="font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 8px;">Modelo: STR 110 ENERGY | Serie: 1257146</p>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+                                <strong>Refacción sugerida (COT-2993):</strong> 1 Kit Bomba de Drenado y Sensor de Nivel.<br>
+                                <span style="font-size: 12px;">(Incluye: Bomba de drenado, kit air pressure chamber, hose DN5X1.5, pressure transmitter, universal cable pressure y nylon clip 300X4.6).</span>
+                            </p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Importe (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$26,950.00</strong>
+                        </div>
+                    </div>
+
+                    <!-- Horno Rational -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--brand-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-fire-burner text-blue" style="margin-right: 8px;"></i> 2. Horno Rational
+                            </h4>
+                            <p style="font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 8px;">Modelo: SCCWE201G | Serie: G21SH13102373213</p>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+                                <strong>Refacción sugerida (COT-2928):</strong> 1 Kit de Electrodo de encendido para el generador de vapor.
+                            </p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Importe (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$5,035.32</strong>
+                        </div>
+                    </div>
+
+                    <!-- Marmita -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 0; border-left: 5px solid var(--brand-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-temperature-high text-blue" style="margin-right: 8px;"></i> 3. Marmita Intertécnica
+                            </h4>
+                            <p style="font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 8px;">Modelo: MGV-60 | Serie: 9655-1</p>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+                                <strong>Refacción sugerida (COT-2928):</strong> 1 Kit de Bujía con cable y piloto para ignición.
+                            </p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Importe (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$10,767.00</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="col" style="padding: 0; display: flex; flex-direction: column;">
+                    
+                    <!-- Conservadores Calientes -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--brand-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-box-archive text-blue" style="margin-right: 8px;"></i> 4. Conservadores Calientes TRUE (2 Equipos)
+                            </h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--text-muted);">
+                                <li style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                                    <strong style="color: var(--text-main);">Modelo: STR2HPT-2S-2S | Serie: 8078460</strong><br>
+                                    <span style="display: block; margin-top: 5px; color: var(--brand-blue-dark);"><strong>Sugerido (COT-2928):</strong> 2 Juntas de puerta <br> <strong>Importe: $7,722.12 (Sin IVA)</strong></span>
+                                </li>
+                                <li>
+                                    <strong style="color: var(--text-main);">Modelo: STA1HPT-1S-1S | Serie: 9811647</strong><br>
+                                    <span style="display: block; margin-top: 5px; color: var(--brand-blue-dark);"><strong>Sugerido (COT-2928):</strong> 1 Junta de puerta <br> <strong>Importe: $3,861.06 (Sin IVA)</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Total Empaques (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$11,583.18</strong>
+                        </div>
+                    </div>
+
+                    <!-- Refrigerador TRUE -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 20px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-snowflake text-red" style="margin-right: 8px;"></i> 5. Refrigerador TRUE
+                            </h4>
+                            <p style="font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 8px;">Modelo: 3,900-07-C | Serie: 7498213</p>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+                                <strong>Refacción sugerida (COT-2928):</strong> 1 Lámpara 25T10 Teflon Coated 130V Incandescent (Med Base).
+                            </p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Importe (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$2,350.00</strong>
+                        </div>
+                    </div>
+                    
+                    <!-- Baño María -->
+                    <div class="info-panel" style="background: #ffffff; padding: 25px; margin-bottom: 0; border-left: 5px solid var(--brand-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; flex-grow: 1;">
+                        <div style="flex-grow: 1;">
+                            <h4 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 19px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-sink text-blue" style="margin-right: 8px;"></i> 6. Baño María 1
+                            </h4>
+                            <p style="font-size: 13px; color: var(--brand-blue); font-weight: 700; margin-bottom: 8px;">Modelo: S/M | Serie: S/S</p>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;">
+                                <strong>Refacción sugerida (COT-2928):</strong> 1 Niple Galvanizado 3/4" x 12".
+                            </p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 10px 15px; border-radius: 6px; border: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; font-size: 14px; margin-top: 15px;">
+                            <span style="color: var(--text-muted);">Importe (Sin IVA):</span>
+                            <strong style="color: var(--brand-blue-dark); font-size: 16px;">$1,162.09</strong>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- (Secciones 4 a 7.5 de Actividades, Alcance, Beneficios y Certificaciones se quedan idénticas al modelo HTML) -->
-    <!-- 4. ACTIVIDADES A REALIZAR -->
-    <section id="actividades" class="seccion-clara curriculum">
+    <!-- 4. COTIZACIONES PENDIENTES -->
+    <section id="cotizaciones" class="seccion-clara portafolio">
         <div class="contenido-seccion">
-            <h2>Actividades a Realizar</h2>
-            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Alcance técnico considerado para los mantenimientos preventivos y protocolización de entregables.</p>
+            <h2>Cotizaciones Pendientes de Autorización</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Documentación comercial formal correspondiente a las refacciones de los mantenimientos correctivos listados.</p>
 
-            <div class="fila">
-                <div class="col" style="margin-bottom: 20px;">
-                    <div class="info-panel" style="padding: 30px; height: 100%; background-color: #ffffff;">
-                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 25px; font-family: 'Righteous', cursive; font-size: 22px;">
-                            <i class="fa-solid fa-screwdriver-wrench text-blue" style="margin-right: 10px;"></i> Ejecución Técnica
-                        </h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Inspección visual y funcional</strong> del equipo.</span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Limpieza técnica</strong> y descalcificación (según aplique).</span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Revisión y ajuste</strong> de conexiones eléctricas, mecánicas e hidráulicas.</span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Verificación del funcionamiento</strong> de componentes principales.</span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Ajuste y lubricación</strong> de componentes cuando sea requerido.</span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
-                                <span style="color: var(--text-muted);"><strong>Pruebas de funcionamiento</strong> y operación del equipo.</span>
-                            </li>
-                        </ul>
+            <div class="grid-2">
+                <!-- COT-2993 -->
+                <div class="info-panel" style="background: #fff; padding: 30px; border-radius: 10px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 22px; margin: 0;">Folio: COT-2993</h3>
+                        <span style="background: #f8f9fa; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; color: var(--text-muted);">16/Oct/2026</span>
                     </div>
-                </div>
-
-                <div class="col" style="margin-bottom: 20px;">
-                    <div class="info-panel" style="padding: 30px; height: 100%; border-left-color: var(--accent-red); background-color: #ffffff;">
-                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 25px; font-family: 'Righteous', cursive; font-size: 22px;">
-                            <i class="fa-solid fa-file-signature text-red" style="margin-right: 10px;"></i> Reporte de Servicio
-                        </h3>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 15px;">
-                            Durante la ejecución de los mantenimientos preventivos se generará un reporte de servicio documentando las actividades y observaciones, incluyendo fotografías del proceso.
-                        </p>
-                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 35px;">
-                            Al finalizar cada servicio, se solicitará la <strong>firma del personal designado por Microsoft/CBRE</strong> como evidencia de conformidad.
-                        </p>
-                        <div style="text-align: center; margin-top: auto;">
-                            <!-- Link Actualizado a CBRE -->
-                            <button onclick="abrirPDF(event, 'pdfs/REPORTE DE SERVICIO EJEMPLO CBRE.pdf')" class="pdf-btn">
-                                <i class="fa-solid fa-file-pdf"></i> Ver Ejemplo de Reporte
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. ALCANCE Y BENEFICIOS (Queda igual, solo se omite TMMGT en título si existiera) -->
-    <section id="condiciones" class="seccion-clara sobremi">
-        <!-- Contenido original mantenido -->
-        <div class="contenido-seccion">
-            <h2>Alcance de Servicio</h2>
-            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Lineamientos operativos y cobertura integral de la Póliza de Mantenimiento.</p>
-            <!-- ... todo el contenido original de Condiciones ... -->
-            <div class="fila" style="margin-bottom: 50px; gap: 30px;">
-                <div class="col">
-                    <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; margin-bottom: 20px; font-size: 24px;">
-                        <i class="fa-solid fa-gears text-blue" style="margin-right: 10px;"></i> Cobertura y Refacciones
-                    </h3>
-                    <ul class="lista-alcance">
-                        <li><strong>Mantenimiento Preventivo:</strong> Servicios realizados conforme a la frecuencia (4 al año).</li>
-                        <li><strong>Mano de Obra Incluida:</strong> Instalación de refacciones sin costo adicional durante la póliza.</li>
-                        <li><strong>Insumos Incluidos:</strong> Líquidos y consumibles menores necesarios (ej. descalcificantes).</li>
-                        <li><strong>Refacciones:</strong> Se cotizan por separado para autorización previa.</li>
+                    
+                    <p style="color: var(--text-main); font-weight: 600; margin-bottom: 12px;">Lavaloza Tren Compacto Winterhalter (STR 110 ENERGY)</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 14px; color: var(--text-muted); flex-grow: 1;">
+                        <li style="margin-bottom: 8px;"><i class="fa-solid fa-wrench text-blue" style="margin-right: 8px;"></i> <strong>1 KIT:</strong> Bomba de drenado y sensor de nivel completo.</li>
                     </ul>
+
+                    <!-- Precio SIN IVA Destacado -->
+                    <div style="background: linear-gradient(135deg, rgba(235, 10, 30, 0.08) 0%, rgba(235, 10, 30, 0.14) 100%); padding: 18px; border-radius: 8px 8px 0 0; border: 2px solid var(--accent-red); border-bottom: none; text-align: center;">
+                        <span style="display: inline-block; background: var(--accent-red); color: #fff; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Inversión SIN IVA</span>
+                        <h4 class="text-red" style="font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$26,950.00 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h4>
+                    </div>
+
+                    <!-- Precio CON IVA y Desglose Aparte -->
+                    <div style="background-color: #f8f9fa; padding: 12px 15px; border-radius: 0 0 8px 8px; margin-bottom: 20px; border: 1px dashed #ccc; border-top: none; font-size: 13px; color: var(--text-muted);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                            <span>IVA (16%):</span>
+                            <span>$4,312.00 MXN</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 4px; border-top: 1px solid #ddd; margin-top: 4px;">
+                            <span><strong>Total (Con IVA):</strong></span>
+                            <strong style="color: var(--text-main); font-size: 14px;">$31,262.00 MXN</strong>
+                        </div>
+                    </div>
+
+                    <button onclick="abrirPDF(event, 'pdfs/COTIZACION COSIAM0000002993 (1).pdf')" class="pdf-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Descargar Cotización COT-2993
+                    </button>
                 </div>
-                <div class="col">
-                    <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; margin-bottom: 20px; font-size: 24px;">
-                        <i class="fa-solid fa-stopwatch text-blue" style="margin-right: 10px;"></i> Logística y Tiempos
-                    </h3>
-                    <ul class="lista-alcance">
-                        <li><strong>Atención de Correctivos:</strong> Cuando sea posible, se atienden en el mismo servicio.</li>
-                        <li><strong>Tiempo de Respuesta:</strong> Atención a reportes en un máximo de 24 horas hábiles.</li>
-                        <li><strong>Reportes Técnicos:</strong> Entrega de bitácoras con actividades y recomendaciones.</li>
-                        <li><strong>Programación Flexible:</strong> Mantenimientos coordinados para no afectar la operación.</li>
+
+                <!-- COT-2928 -->
+                <div class="info-panel" style="background: #fff; padding: 30px; border-radius: 10px; border-left: 5px solid var(--accent-red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 22px; margin: 0;">Folio: COT-2928</h3>
+                        <span style="background: #f8f9fa; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; color: var(--text-muted);">23/Sep/2026</span>
+                    </div>
+                    
+                    <p style="color: var(--text-main); font-weight: 600; margin-bottom: 12px;">Lote de Refacciones Multimarca (6 Conceptos)</p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 13px; color: var(--text-muted); flex-grow: 1;">
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 2 Juntas de Puerta TRUE (STR2HPT-2S-2S)</span>
+                            <strong>$7,722.12 (Sin IVA)</strong>
+                        </li>
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 1 Junta de Puerta TRUE (STA1HPT-1S-1S)</span>
+                            <strong>$3,861.06 (Sin IVA)</strong>
+                        </li>
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 1 Lámpara Teflón 130V TRUE (900-07-C)</span>
+                            <strong>$2,350.00 (Sin IVA)</strong>
+                        </li>
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 1 Kit Bujía y Piloto Marmita (MGV-60)</span>
+                            <strong>$10,767.00 (Sin IVA)</strong>
+                        </li>
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 1 Niple Galvanizado 3/4" x 12" (Baño María)</span>
+                            <strong>$1,162.09 (Sin IVA)</strong>
+                        </li>
+                        <li style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                            <span>- 1 Kit Electrodo Vapor Rational (SCCWE201G)</span>
+                            <strong>$5,035.32 (Sin IVA)</strong>
+                        </li>
                     </ul>
-                </div>
-            </div>
-            <div class="grid-3">
-                <div class="card-beneficio-clean"><i class="fa-solid fa-chart-line"></i><h4>Maximización</h4><p>Mayor vida útil y conservación del rendimiento.</p></div>
-                <div class="card-beneficio-clean"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>Trazabilidad</h4><p>Historial de servicio y bitácoras actualizadas.</p></div>
-                <div class="card-beneficio-clean"><i class="fa-solid fa-headset"></i><h4>Garantía Operativa</h4><p>Prohibición estricta de canibalización de piezas.</p></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 6. BENEFICIOS DE LA PÓLIZA -->
-    <section id="beneficios" class="seccion-oscura portafolio">
+                    <!-- Precio SIN IVA Destacado -->
+                    <div style="background: linear-gradient(135deg, rgba(235, 10, 30, 0.08) 0%, rgba(235, 10, 30, 0.14) 100%); padding: 18px; border-radius: 8px 8px 0 0; margin-bottom: 0; border: 2px solid var(--accent-red); border-bottom: none; text-align: center;">
+                        <span style="display: inline-block; background: var(--accent-red); color: #fff; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 10px; text-transform: uppercase; margin-bottom: 5px;">Subtotal Lote SIN IVA</span>
+                        <h4 class="text-red" style="font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$30,897.59 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h4>
+                    </div>
+
+                    <!-- Precio CON IVA y Desglose Aparte -->
+                    <div style="background-color: #f8f9fa; padding: 12px 15px; border-radius: 0 0 8px 8px; margin-bottom: 20px; border: 1px dashed #ccc; border-top: none; font-size: 13px; color: var(--text-muted);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                            <span>IVA (16%):</span>
+                            <span>$4,943.61 MXN</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 4px; border-top: 1px solid #ddd; margin-top: 4px;">
+                            <span><strong>Total Neto (Con IVA):</strong></span>
+                            <strong style="color: var(--text-main); font-size: 14px;">$35,841.20 MXN</strong>
+                        </div>
+                    </div>
+
+                    <button onclick="abrirPDF(event, 'pdfs/COTIZACION COSIAM0000002928 (2).pdf')" class="pdf-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Descargar Cotización COT-2928
+                    </button>
+                </div>
+            </div> <!-- Cierra contenedor-tarjetas-contacto -->
+        </div> <!-- Cierra contenido-seccion -->
+    </section> <!-- Cierra la sección de Contacto -->
+
+    <!-- 4.5 ESTADO DE FACTURACIÓN -->
+    <section id="facturacion" class="seccion-oscura">
         <div class="contenido-seccion">
-            <h2>Beneficios de la Póliza</h2>
-            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Impacto directo en la eficiencia, seguridad y durabilidad de las cocinas industriales de TMMGT.</p>
-            
-            <div class="grid-4">
-                <!-- 1 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-bolt"></i>
-                    <h4 style="font-size: 18px;">Atención prioritaria</h4>
-                    <p style="font-size: 13px;">Respuesta preferente ante reportes e incidencias operativas.</p>
-                </div>
-                
-                <!-- 2 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-industry"></i>
-                    <h4 style="font-size: 18px;">Continuidad operativa</h4>
-                    <p style="font-size: 13px;">Reducción de tiempos de paro mediante atención oportuna de fallas.</p>
-                </div>
+            <h2>Control de Facturación BRP</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Estado de cuenta, historial de pagos y saldos pendientes al corte del <strong>27 de Octubre de 2026</strong>.</p>
 
-                <!-- 3 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4 style="font-size: 18px;">Prevención de fallas</h4>
-                    <p style="font-size: 13px;">Identificación anticipada de condiciones que puedan afectar la operación.</p>
+            <!-- Tarjetas de Resumen (KPIs) -->
+            <div class="grid-3" style="margin-bottom: 30px;">
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid var(--brand-blue); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Total Facturado</h4>
+                    <h2 class="text-blue" style="font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$422,270.13 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h2>
                 </div>
-
-                <!-- 4 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                    <h4 style="font-size: 18px;">Mayor vida útil</h4>
-                    <p style="font-size: 13px;">Conservación del desempeño y funcionamiento adecuado de los equipos.</p>
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid #28a745; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Saldo Pagado</h4>
+                    <h2 style="color: #28a745; font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$124,700.00 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h2>
                 </div>
-
-                <!-- 5 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <h4 style="font-size: 18px;">Planeación y control</h4>
-                    <p style="font-size: 13px;">Programación de mantenimientos durante el año, facilitando la organización.</p>
-                </div>
-
-                <!-- 6 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <h4 style="font-size: 18px;">Seguimiento por equipo</h4>
-                    <p style="font-size: 13px;">Historial de servicios, hallazgos y recomendaciones para toma de decisiones.</p>
-                </div>
-
-                <!-- 7 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-user-gear"></i>
-                    <h4 style="font-size: 18px;">Respaldo especializado</h4>
-                    <p style="font-size: 13px;">Asesoría para la correcta operación, cuidado y conservación de los equipos.</p>
-                </div>
-
-                <!-- 8 -->
-                <div class="card-beneficio-clean" style="padding: 30px 15px;">
-                    <i class="fa-solid fa-toolbox"></i>
-                    <h4 style="font-size: 18px;">Atención integral en sitio</h4>
-                    <p style="font-size: 13px;">Aprovechamiento de las visitas programadas para revisar y atender incidencias.</p>
+                <div class="info-panel" style="background: #ffffff; padding: 25px; border-left: 5px solid var(--accent-red); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 8px;">
+                    <h4 style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-bottom: 5px; font-weight: 700;">Saldo Pendiente</h4>
+                    <h2 class="text-red" style="font-size: 32px; font-family: 'Righteous', cursive; margin: 0;">$297,570.13 <span style="font-size: 14px; color: var(--text-muted);">MXN</span></h2>
                 </div>
             </div>
 
-            <!-- NOTA ADMINISTRATIVA / SEGURIDAD -->
-            <div style="margin-top: 50px; padding: 20px; background-color: rgba(220, 53, 69, 0.1); border-left: 5px solid var(--accent-red); border-radius: 6px; max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <p style="color: #333333; font-size: 15px; margin: 0; line-height: 1.6; text-align: justify;">
-                    <i class="fa-solid fa-circle-exclamation" style="color: var(--accent-red); margin-right: 10px; font-size: 18px;"></i>
-                    <strong style="color: var(--accent-red); letter-spacing: 0.5px;">NOTA ADMINISTRATIVA IMPORTANTE:</strong> 
-                    Para garantizar la continuidad operativa sin interrupciones y mantener vigentes las condiciones de atención preferencial, <strong style="color: #000000;">toda orden de compra deberá emitirse con un mínimo de 5 días de anticipación al vencimiento de la orden de compra vigente.</strong>
-                </p>
+            <!-- Tabla de Facturas -->
+            <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: center; white-space: nowrap;">
+                    <thead>
+                        <tr style="background-color: var(--brand-blue-dark); color: #fff;">
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Fecha</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Folio</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Saldo sin IVA</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">IVA</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Total</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Fecha de Pago</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Saldo Pagado</th>
+                            <th style="padding: 12px; border: 1px solid #dee2e6;">Saldo Pendiente</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: var(--text-muted);">
+                        <tr style="background-color: #fcfcfc;">
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">22/JUL/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2652</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$53,750.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$8,600.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">16/10/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: #28a745; font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">07/AGO/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2665</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$53,750.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$8,600.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">09/10/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: #28a745; font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                        </tr>
+                        <tr style="background-color: #fcfcfc;">
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">01/SEP/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2689</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$60,215.10</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$9,634.42</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$69,849.52</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$69,849.52</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">09/SEP/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2694</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$36,172.46</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$5,787.60</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$41,960.06</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$41,960.06</td>
+                        </tr>
+                        <tr style="background-color: #fcfcfc;">
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">15/SEP/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2707</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$53,750.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$8,600.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$62,350.00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">25/SEP/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2724</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$15,081.64</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$2,413.06</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$17,494.70</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$17,494.70</td>
+                        </tr>
+                        <tr style="background-color: #fcfcfc;">
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">28/SEP/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2726</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$9,151.97</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$1,464.32</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$10,616.29</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$10,616.29</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">08/OCT/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2748</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$19,414.80</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$3,106.36</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$22,521.16</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$22,521.16</td>
+                        </tr>
+                        <tr style="background-color: #fcfcfc;">
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">12/OCT/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2750</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$8,990.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$1,438.40</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$10,428.40</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$10,428.40</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">13/OCT/2026</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; font-weight: bold; color: var(--brand-blue);">F-2753</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$53,750.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">$8,600.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--text-main); font-weight: bold;">$62,350.00</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef;">-</td>
+                            <td style="padding: 10px; border: 1px solid #e9ecef; color: var(--accent-red); font-weight: bold;">$62,350.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot style="background-color: #e9ecef; font-weight: bold; color: var(--brand-blue-dark); font-size: 14px;">
+                        <tr>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #dee2e6; text-align: right;">TOTALES</td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6;">$364,025.97</td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6;">$58,244.16</td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6;">$422,270.13</td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6;"></td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6; color: #28a745;">$124,700.00</td>
+                            <td style="padding: 12px; border: 1px solid #dee2e6; color: var(--accent-red);">$297,570.13</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-
-            <!-- NOTA OPERATIVA / LIBERACIÓN DE EQUIPOS -->
-            <div style="margin-top: 20px; padding: 20px; background-color: rgba(0, 86, 179, 0.05); border-left: 5px solid var(--brand-blue); border-radius: 6px; max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <p style="color: #333333; font-size: 15px; margin: 0; line-height: 1.6; text-align: justify;">
-                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--brand-blue); margin-right: 10px; font-size: 18px;"></i>
-                    <strong style="color: var(--brand-blue); letter-spacing: 0.5px;">NOTA OPERATIVA IMPORTANTE:</strong> 
-                    Para cumplir con los tiempos de servicio establecidos en el calendario, <strong style="color: #000000;">es indispensable contar con la liberación previa de los equipos</strong> por parte del área correspondiente antes de la intervención técnica. El orden de atención de los equipos se programará de acuerdo con la prioridad operativa que determine el cliente.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 7. CERTIFICACIONES Y SEGURIDAD -->
-    <section id="certificaciones" class="seccion-clara curriculum">
-        <div class="contenido-seccion">
-            <h2>Certificaciones Oficiales</h2>
-            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Respaldo técnico directo de los fabricantes líderes en la industria gastronómica.</p>
-            
-            <!-- Cuadrícula de 4 Certificaciones -->
-            <div class="grid-4" style="margin-bottom: 40px;">
-                
-                <!-- Certificación 1 -->
-                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Winterhalter</h3>
-                        <p style="font-size: 14px; margin-bottom: 25px;">Centro de servicio autorizado. Distribución, soporte y refacciones originales.</p>
-                    </div>
-                    <!-- Botón para abrir PDF -->
-                    <button onclick="abrirPDF(event, 'pdfs/winterhalter.pdf')" class="pdf-btn" style="margin-top: auto;">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
-                    </button>
-                </div>
-                
-                <!-- Certificación 2 -->
-                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Rational</h3>
-                        <p style="font-size: 14px; margin-bottom: 25px;">Service Partner calificado para reparaciones y servicios en garantía.</p>
-                    </div>
-                    <button onclick="abrirPDF(event, 'pdfs/Rational.pdf')" class="pdf-btn" style="margin-top: auto;">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
-                    </button>
-                </div>
-
-                <!-- Certificación 3 -->
-                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Zumex</h3>
-                        <p style="font-size: 14px; margin-bottom: 25px;">Soporte y mantenimiento profesional bajo políticas rigurosas de la marca.</p>
-                    </div>
-                    <button onclick="abrirPDF(event, 'pdfs/ZUMEX.pdf')" class="pdf-btn" style="margin-top: auto;">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
-                    </button>
-                </div>
-
-                <!-- Certificación 4 -->
-                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Middleby</h3>
-                        <p style="font-size: 14px; margin-bottom: 25px;">Distribuidor autorizado para servicio y validación de garantías (Pitco, Blodgett, TurboChef, etc.).</p>
-                    </div>
-                    <button onclick="abrirPDF(event, 'pdfs/MIDDLEBY.pdf')" class="pdf-btn" style="margin-top: auto;">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
-                    </button>
-                </div>
-                
-            </div>
-
-            <!-- Nota de Capacitación Constante y DC3 (Rediseñada estilo imagen) -->
-            <div class="info-panel" style="text-align: center; border: none; border-bottom: 6px solid var(--brand-blue-dark); border-radius: 8px; padding: 40px; background-color: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                <strong style="color: var(--brand-blue-dark); font-size: 22px; display: block; margin-bottom: 15px; font-family: 'Righteous', cursive;">
-                    <i class="fa-solid fa-user-shield text-blue" style="margin-right: 8px;"></i> Competencias y Seguridad DC3
-                </strong> 
-                <p style="font-size: 16px; color: #111111; line-height: 1.6; margin: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Nuestro equipo técnico cuenta con certificaciones DC3 y se mantiene en capacitación constante, fortaleciendo continuamente sus conocimientos y habilidades para brindar servicios seguros, profesionales y de calidad.
-                </p>
-            </div>
-            
         </div>
     </section>
 
@@ -502,7 +788,6 @@
                         <img src="./img/logo.jpg" alt="Logo Cosiam" style="height: 50px; width: auto; margin-bottom: 25px;">
                         <h4 style="color: var(--brand-blue-dark); font-size: 18px; margin-bottom: 25px; font-weight: 700;">Documentación Legal Probatoria</h4>
                         <div style="display: flex; flex-direction: column; gap: 15px;">
-                            <!-- PDF STPS Cosiam -->
                             <button onclick="abrirPDF(event, 'pdfs/REGISTRO REPSE - SEP 2024.pdf')" class="pdf-btn" style="width: 100%; padding: 14px; background-color: var(--brand-blue-dark); color: #fff; border: none;">
                                 <i class="fa-solid fa-file-contract" style="color: #fff;"></i> Registro Oficial STPS (Vigente)
                             </button>
@@ -513,41 +798,20 @@
         </div>
     </section>
 
-    <!-- 8. CALENDARIO ANUAL -->
-    <section id="calendario" class="seccion-clara" style="position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: linear-gradient(90deg, var(--brand-blue), var(--accent-red)); border-radius: 2px;"></div>
-        <div class="contenido-seccion" style="padding-top: 50px; padding-bottom: 50px;">
-            <h2>Calendario Operativo 2026-2027</h2>
-            <div style="max-width: 650px; margin: 30px auto 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--accent-red); text-align: center; position: relative;">
-                <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background-color: var(--accent-red); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);">
-                    <i class="fa-solid fa-calendar-check"></i>
-                </div>
-                <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 24px; margin-top: 15px; margin-bottom: 10px;">En Curso - Próximo Servicio: Noviembre 2026</h3>
-                <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">Los servicios preventivos iniciaron con éxito en Julio 2026. A continuación, el programa para los 44 equipos.</p>
-                <button onclick="abrirCalendarioModal()" class="btn-calendario-rojo">
-                    <i class="fa-solid fa-table-cells" style="font-size: 20px;"></i> Ver Bitácora y Calendario
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- (Secciones 10 y 11 del Eslogan y Contacto se quedan idénticas) -->
-    <!-- 10. ESLOGAN -->
+    <!-- 9. ESLOGAN -->
     <section id="eslogan" class="eslogan-banner">
         <div class="contenido-seccion" style="text-align: center;">
             <h2 style="color: #fff; margin: 0; font-size: 38px;">"En Grupo COSIAM somos una empresa mexicana especializada en mantenimiento de equipos, comprometida con brindar soluciones confiables y atención técnica especializada para asegurar la continuidad de sus operaciones."</h2>
         </div>
     </section>
 
-    <!-- 11. CONTACTO Y DIRECTORIO -->
+    <!-- 10. CONTACTO Y DIRECTORIO -->
     <section id="contacto" class="seccion-clara contacto">
         <div class="contenido-seccion">
             <h2>Directorio de Contacto</h2>
             <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Equipo estratégico a su entera disposición para la gestión y seguimiento del proyecto.</p>
             
             <div class="contenedor-tarjetas-contacto">
-                
-                <!-- Contacto 1: Director Operativo -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">German Enciso</h3>
@@ -558,7 +822,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 2: Directora Comercial -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">Araceli Osorno</h3>
@@ -569,7 +832,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 3: Ventas (Diana) -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">Diana Paola López</h3>
@@ -580,7 +842,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 4: Gerente Administrativo y Finanzas -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">German Fernando Enciso</h3>
@@ -591,7 +852,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 5: Gerente Operativo -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">Christian Andree Enciso</h3>
@@ -602,7 +862,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 6: Recursos Humanos -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">Yessica Monserrat Barrios</h3>
@@ -613,7 +872,6 @@
                     </div>
                 </div>
 
-                <!-- Contacto 7: TI (Fabricio) -->
                 <div class="card-contacto">
                     <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
                     <h3 style="font-size: 19px;">Ing. Fabricio Cárdenas</h3>
@@ -623,7 +881,6 @@
                         <p><i class="fa-solid fa-envelope text-blue"></i> aux02@grupocosiam.com</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -634,27 +891,19 @@
         <p style="margin-top:20px;">Cosiam x BRP - Mantenimiento Preventivo 2026-2027</p>
     </footer>
 
-    <script src="script.js"></script>
-
-    <!-- Ventana Modal Calendario y Control -->
+    <!-- Ventana Modal Exclusiva para Calendario de Servicios (43 Equipos) -->
     <div id="modal-calendario" class="modal-overlay" onclick="cerrarCalendarioModal(event)">
         <div class="modal-contenido" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <h3><i class="fa-solid fa-chart-line text-red"></i> Panel de Control BRP</h3>
+                <h3><i class="fa-solid fa-calendar-days text-red"></i> Calendario de Servicios Preventivos BRP 2026 - 2027</h3>
                 <button onclick="cerrarCalendarioModal()" class="modal-cerrar">&times;</button>
             </div>
-            
-            <!-- Pestañas para cambiar entre Calendario y Control -->
-            <div class="modal-tabs">
-                <button class="tab-btn active" onclick="cambiarPestanaModal('calendario')">Calendario de Servicios</button>
-                <button class="tab-btn" onclick="cambiarPestanaModal('control')">Control Mensual y Facturación</button>
-            </div>
-            
-            <!-- Contenedor dinámico de la tabla -->
             <div class="modal-body-table" id="contenedor-tabla">
                 <!-- Se inyecta dinámicamente con JS -->
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
